@@ -1,0 +1,22 @@
+<template>
+<lightning-card title="Lifecycle Hook`s">
+    <!-- <c-L-C-H-child></c-L-C-H-child> -->
+    <div class="slds-var-m-around_medium">
+        <!-- <c-L-C-H-child></c-L-C-H-child> -->
+        <input type="text" onkeyup={changehand}>
+        {name}
+    </div>
+    <p></p>
+    <template if:false={isChildVisible}>
+        <lightning-button variant="brand" label="Show" onclick={pressmi} ></lightning-button> <p></p>
+
+    </template>
+    <template if:true={isChildVisible}>
+        <lightning-button variant="brand" label="Hide" onclick={pressmi} ></lightning-button>
+
+    </template>
+    <template if:true={isChildVisible}>
+        <c-child></c-child>
+    </template>
+</lightning-card>
+</template> 
