@@ -1,0 +1,45 @@
+<template>
+ <lightning-card title="Display Account"> 
+
+<lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search"></lightning-input>
+ </lightning-card>
+<!-- <template for:each={accounts.data} for:item="acc">
+    <lightning-layout vertical-align="center" key={acc.id}>                
+         <lightning-input type="checkbox"  label={acc.Name} onclick={getval}></lightning-input>
+         <li>
+            {acc.Name}
+            {acc.AccountNumber}
+        </li> 
+    </lightning-layout>
+</template> -->
+<!-- <div class="slds-grid slds-wrap">
+    <template for:each={accounts.data} for:item="acc">
+     <span key={acc.id}>
+       <div class="slds-col slds-size_2-of-3" style="width: 200px;">
+        <lightning-input type="checkbox"  value={acc.id} label={acc.Name} onchange={getval}></lightning-input>
+        &nbsp;
+       </div>
+     </span>
+    </template>
+   </div>
+
+   <div class="slds-grid slds-gutters">
+    <template for:each={accounts.data} for:item="acc">
+<span key={acc.id}>
+    <div class="slds-col" style="width: 200px;">
+        <lightning-input type="checkbox" value={acc.id} label={acc.Name} onchange={getval}></lightning-input> &nbsp;
+    </div>
+</span>
+    </template>
+   </div>
+</lightning-card> -->
+
+<div>
+    <c-display-Accout list={accounts} ></c-display-Accout>
+
+</div>
+
+
+
+
+</template>
