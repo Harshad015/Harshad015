@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Pill Container">
+    
+        <!-- <lightning-pill-container items={store} label={store} onitemremove={remove}></lightning-pill-container>
+        <template for:each={store} for:item="pillItem" for:index="index">               
+            <lightning-pill label={pillItem.label} onremove={removePillItem} 
+                key={pillItem.label} name={index}>
+            </lightning-pill>
+        </template> -->
+        <template for:each={store} for:item="each" for:index="index">
+            
+                <lightning-pill class="slds-m-left_xx-small"  onremove={removePillItem} key={each.key} label={each} name={index}></lightning-pill>
+           
+        </template>
+        
+    
+</lightning-card>
+    <lightning-card title="Display Account">
+        <div class="slds-grid slds-wrap">
+            <template for:each={list.data} for:item="acc">
+             <span key={acc.id}>
+               <div class="slds-col slds-size_2-of-3" style="width: 200px;">
+                <lightning-input type="checkbox"  value={check} label={acc.Name} onchange={getval}></lightning-input>
+                &nbsp;
+               </div>
+             </span>
+            </template>
+           </div>
+    </lightning-card>
+</template>
